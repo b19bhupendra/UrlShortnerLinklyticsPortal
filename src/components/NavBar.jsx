@@ -49,6 +49,16 @@ const Navbar = () => {
               About
             </Link>
           </li>
+          <li className="hover:text-btnColor font-[500]  transition-all duration-150">
+            <Link
+              className={`${
+                path === "/contact" ? "text-white font-semibold" : "text-gray-200"
+              }`}
+              to="/contact"
+            >
+              Contact
+            </Link>
+          </li>
           {token && (
             <li className="hover:text-btnColor font-[500]  transition-all duration-150">
             <Link
