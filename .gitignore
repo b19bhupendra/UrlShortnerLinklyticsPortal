@@ -9,3 +9,11 @@ build/
 .DS_Store
 .env
 .vscode/
+
+# logs
+logs
+*.log
+
+
+# package-lock.json
+package-lock.json

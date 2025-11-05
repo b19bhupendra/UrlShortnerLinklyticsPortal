@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import AboutPage from './components/AboutPage'
 import NavBar from './components/NavBar'
@@ -12,7 +12,7 @@ import ContactPage from './components/ContactPage'
 function App() {
   return (
     <ContextProvider>
-      <BrowserRouter>
+      <Router>
         <NavBar />
           <Routes>
             <Route path='/' element={<LandingPage />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path='/contact' element={<ContactPage/>} />
           </Routes>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </ContextProvider>
   )
 }
