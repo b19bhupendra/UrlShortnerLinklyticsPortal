@@ -7,6 +7,8 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import { ContextProvider } from './contextApi/ContextApi' // <-- Import ContextProvider
 import ContactPage from './components/ContactPage'
+import RegisterPage from './components/RegisterPage'
+import { Toaster } from 'react-hot-toast'
 
 
 function App() {
@@ -14,11 +16,13 @@ function App() {
     <ContextProvider>
       <Router>
         <NavBar />
-          <Routes>
-            <Route path='/' element={<LandingPage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/contact' element={<ContactPage/>} />
-          </Routes>
+          <Toaster position='bottom-center'  />
+            <Routes>
+              <Route path='/' element={<LandingPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/contact' element={<ContactPage/>} />
+              <Route path='/register' element={<RegisterPage/>} />
+            </Routes>
         <Footer />
       </Router>
     </ContextProvider>
