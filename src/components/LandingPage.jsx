@@ -1,17 +1,16 @@
 import React from 'react'
 import Card from './Card';
 import {motion} from 'framer-motion';
-import { useStoreContext } from '../contextApi/ContextApi';
 import { useNavigate } from 'react-router-dom';
+import { useStoreContext } from '../contextApi/ContextApi.jsx';
 
 let desc = "Generate short, memorable links with ease using Linklytics’s intuitive interface. Share URLs effortlessly across platforms. Optimize your sharing strategy with Linklytics. Track clicks and manage your links seamlessly to enhance your online presence. Generate short, memorable links with ease using Linklytics’s intuitive interface. Share URLs effortlessly across platforms.";
 
 
 //rafce - > it is an shortform to give react boilerplate component
 const LandingPage = () => {
-
-    const navigation = useNavigate();
-    const { token } = useStoreContext();
+    const navigation = useNavigate();    
+    const { token } = useStoreContext();// get the token from the context
     console.log("Token in landing page:", token);
 
     const dashBoardNavigateHandler = () => {

@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
+// Create a Context for global state management 
+// Not exporting useContext directly to avoid confusion and we are using a custom hook instead in which we passing this ContextApi
 const ContextApi = createContext();
 
 export const ContextProvider = ({ children }) => {
@@ -17,7 +19,7 @@ export const ContextProvider = ({ children }) => {
     return <ContextApi.Provider value={sendData}>{children}</ContextApi.Provider>
 };
 
-
+// Custom hook to use the ContextApi easily in components
 export const useStoreContext = () => {
     const context = useContext(ContextApi);
     return context;

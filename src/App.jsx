@@ -9,6 +9,7 @@ import { ContextProvider } from './contextApi/ContextApi' // <-- Import ContextP
 import ContactPage from './components/ContactPage'
 import RegisterPage from './components/RegisterPage'
 import { Toaster } from 'react-hot-toast'
+import LoginPage from './components/login'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path='/about' element={<AboutPage />} />
               <Route path='/contact' element={<ContactPage/>} />
               <Route path='/register' element={<RegisterPage/>} />
+              <Route path='/login' element={<LoginPage/>} />
             </Routes>
         <Footer />
       </Router>
