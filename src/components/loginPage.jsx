@@ -40,7 +40,7 @@ export const LoginPage = () => {
 
             toast.success("Login Successful!"); // show success toast message
             reset(); // reset the form fields after successful submission
-            navigate("/"); // navigate to login page after successful registration
+            navigate("/dashboard"); // navigate to login page after successful registration
         }catch(error){
             console.log("Login Error: ", error);
             toast.error("Login Failed! Please try again."); // show error toast message
