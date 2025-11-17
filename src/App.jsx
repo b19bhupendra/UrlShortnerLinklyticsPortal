@@ -7,18 +7,25 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import { ContextProvider } from './contextApi/ContextApi' // <-- Import ContextProvider
 import ContactPage from './components/ContactPage'
-
+import RegisterPage from './components/RegisterPage'
+import { Toaster } from 'react-hot-toast'
+import LoginPage from './components/LoginPage'
+import DashboardLayout from './components/Dashboard/DashboardLayout.jsx'
 
 function App() {
   return (
     <ContextProvider>
       <Router>
         <NavBar />
-          <Routes>
-            <Route path='/' element={<LandingPage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/contact' element={<ContactPage/>} />
-          </Routes>
+          <Toaster position='bottom-center'  />
+            <Routes>
+              <Route path='/' element={<LandingPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/contact' element={<ContactPage/>} />
+              <Route path='/register' element={<RegisterPage/>} />
+              <Route path='/login' element={<LoginPage/>} />
+              <Route path='/dashboard' element={<DashboardLayout/>} />'
+            </Routes>
         <Footer />
       </Router>
     </ContextProvider>
